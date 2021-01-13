@@ -58,7 +58,7 @@ a {
 }
 
 .content .title {
-    height: 7.5vh;
+    height: 8vh;
     border-bottom: 1px solid rgb(0, 57, 80);
     transition-duration: 500ms;
 }
@@ -67,22 +67,8 @@ a {
     transition-duration: 500ms;
 }
 
-/*Pour adapter à la bonne taille*/
 .hidden {
     height: 2.25em;
-}
-
-/*
-    L'animation pour quand on hover
-*/
-
-.landContainer:hover {
-    background-size: auto 100%;
-    grid-template-rows: 3fr 2fr;
-}
-
-.landContainer:hover .title {
-    height: 8vh;
 }
 
 #landItem1 {
@@ -95,4 +81,11 @@ a {
 
 #landItem3 {
     background-image: url(../assets/placeholders/placeholder_13.jpg);
+}
+
+/* Pour Edge et Chrome */
+
+.landContainer:hover {
+    background-size: auto 100%;
+    grid-template-rows: 3fr 2fr;
 }

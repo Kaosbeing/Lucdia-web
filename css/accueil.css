@@ -104,7 +104,7 @@ body {
 }
 
 .content .title {
-    height: 7.5vh;
+    height: 8vh;
     border-bottom: 1px solid black;
     transition-duration: 500ms;
 }
@@ -125,10 +125,6 @@ body {
 .landContainer:hover {
     background-size: auto 100%;
     grid-template-rows: 3fr 2fr;
-}
-
-.landContainer:hover .title {
-    height: 8vh;
 }
 
 #landItem1 {
