@@ -1,17 +1,3 @@
-@font-face {
-    font-family: "Trajan Bold";
-    src: url(../assets/fonts/Trajan\ Pro\ Bold.ttf);
-}
-
-@font-face {
-    font-family: "Lora";
-    src: url(../assets/fonts/Lora-Medium.ttf);
-}
-
-body {
-    background-color: #021812;
-}
-
 #home-background {
     width: 100%;
     height: 100vh;
@@ -20,12 +6,6 @@ body {
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
-}
-
-.green-gradient {
-    position: absolute;
-    /*background-color: #0A2E21D5; */
-    background: linear-gradient(0deg, rgb(2, 24, 18) 0%, rgb(3, 29, 22) 5%, rgba(10,46,33,0.5) 100%);
 }
 
 #home-background h1 {
@@ -52,7 +32,7 @@ body {
 }
 
 #presentation {
-    background-color: #021812;
+    background-color: var(--dark-green);
 }
 
 #presentation h2 {
@@ -114,7 +94,7 @@ body {
 }
 
 .content>div {
-    background-color: #021812E5;
+    background-color: var(--dark-green-opacity);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,7 +135,7 @@ body {
 }
 
 #landItem3 {
-    background-image: url(../assets/placeholders/placeholder_13.jpg);
+    background-image: url(../assets/placeholders/placeholder_11.jpg);
 }
 
 #landItem4 {
@@ -163,5 +143,5 @@ body {
 }
 
 #landItem5 {
-    background-image: url(../assets/placeholders/placeholder_11.jpg);
+    background-image: url(../assets/placeholders/placeholder_13.jpg);
 }

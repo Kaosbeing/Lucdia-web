@@ -1,10 +1,27 @@
+@font-face {
+    font-family: "Trajan Bold";
+    src: url(../assets/fonts/Trajan\ Pro\ Bold.ttf);
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url(../assets/fonts/Lora-Medium.ttf);
+}
+
+:root {
+    --dark-green: #021812;
+    --dark-green-opacity: #021812E5;
+}
+
 html {
     font-size: 100%;
 }
 
 body {
     margin: 0;
+    font-family: "Lora";
     color: white;
+    background-color: var(--dark-green);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,4 +38,52 @@ p {
 a {
     color: white;
     text-decoration: none;
+}
+
+.green-gradient {
+    position: absolute;
+    background: linear-gradient(0deg, rgb(2, 24, 18) 0%, rgb(3, 29, 22) 5%, rgba(10,46,33,0.5) 100%);
+}
+
+/* Paramètres du header (pour charac list, à voir pour le reste) */
+
+header {
+    height: 10vh;
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: flex-start;
+}
+
+header #homeLinkContainer {
+    width: 10vh;
+    height: 10vh;
+    background-color: blue;
+}
+
+header #homeLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Temporairement, dans l'attente d'un logo. */
+    background-image: url(../assets/placeholders/placeholder_1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(6, 10vw);
+    grid-template-rows: auto;
+}
+
+nav .navItem {
+    font-family: "Trajan Bold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 350ms;
+}
+
+nav .navItem:hover {
+    border-bottom: 5px solid rgb(46, 100, 201);
 }
