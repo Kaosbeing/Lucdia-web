@@ -4,5 +4,11 @@ Current Version : 0.1.3.0
 
 Le site officiel du projet Lucdia askip.
 
+Notes importantes : 
+* Le fait de spécifier "Projet" implique qu'il est en cours, et donc pas terminé.
+* Le site n'est pour le moment fait que pour une utilisation PC. L'utilisation sur un téléphone ou une tablette implique des bugs visuels volontairement ignorés.
+* La résolution sous laquelle le site a été conçu est 1920x1080. C'est la résolution optimale pour une utilisation décente du site.
+* Il peut aussi être un peu lent à charger, c'est normal.
+
 Aucune image n'est de ma propriété, fusse-t-elle intellectuelle.
 Les images ne sont pas libres de droit.
