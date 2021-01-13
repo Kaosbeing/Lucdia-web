@@ -1,11 +1,11 @@
 # Lucdia-web
 
-Current Version : 0.2.1.0
+Current Version : 0.2.1.1
 
 Le site officiel du projet Lucdia askip.
 
-* La page principale est [ici](https://kaosbeing.github.io/Lucdia-web/home.html)
-* La page de liste des persos est [ici](https://kaosbeing.github.io/Lucdia-web/html/lists/charac-list.html) (la page sur laquelle je travaille dans l'immédiat, et où il n'y a pas de liens.)
+* La page principale est [ici](https://kaosbeing.github.io/Lucdia-web/home)
+* La page de liste des persos est [ici](https://kaosbeing.github.io/Lucdia-web/html/lists/charac-list) (la page sur laquelle je travaille dans l'immédiat, et où il n'y a pas de liens.)
 
 Notes importantes : 
 * Le fait de spécifier "Projet" implique qu'il est en cours, et donc pas terminé.

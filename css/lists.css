@@ -1,0 +1,19 @@
+#characListbackground {
+    height: 60vh;
+    width: 100%;
+    background-image: url(../assets/placeholders/placeholder_10.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+#characListbackground .green-gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#characListbackground .green-gradient h1 {
+
+}
