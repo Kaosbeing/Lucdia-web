@@ -87,7 +87,7 @@ body {
 
 .content {
     height: 4em;
-    border: 1px solid rgb(0, 57, 80);
+    border: 1px solid black;
     text-align: center;
     overflow-y: hidden;
     display: grid;
@@ -106,7 +106,7 @@ body {
 
 .content .title {
     height: 4em;
-    border-bottom: 1px solid rgb(0, 57, 80);
+    border-bottom: 1px solid black;
     transition-duration: 500ms;
 }
 
