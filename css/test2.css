@@ -31,9 +31,9 @@ a {
 .landContainer {
     height: 30vh;
     width: 15vw;
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-size: auto 110%;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,12 +41,14 @@ a {
 }
 
 .content {
+    height: 5em;
     border: 1px solid rgb(0, 57, 80);
     text-align: center;
     overflow-y: hidden;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: auto;
+    transition-duration: 500ms;
 }
 
 .content>div {
@@ -58,7 +60,7 @@ a {
 }
 
 .content .title {
-    height: 8vh;
+    height: 5em;
     border-bottom: 1px solid rgb(0, 57, 80);
     transition-duration: 500ms;
 }
@@ -69,6 +71,17 @@ a {
 
 .hidden {
     height: 2.25em;
+}
+
+
+/* Pour Edge et Chrome */
+
+.landContainer:hover {
+    background-size: auto 100%;
+}
+
+.landContainer:hover .content {
+    height: 7.25em;
 }
 
 #landItem1 {
@@ -83,9 +96,10 @@ a {
     background-image: url(../assets/placeholders/placeholder_13.jpg);
 }
 
-/* Pour Edge et Chrome */
+#landItem4 {
+    background-image: url(../assets/placeholders/placeholder_3.jpg);
+}
 
-.landContainer:hover {
-    background-size: auto 100%;
-    grid-template-rows: 3fr 2fr;
+#landItem5 {
+    background-image: url(../assets/placeholders/placeholder_11.jpg);
 }

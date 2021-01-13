@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Trajan Bold";
+    src: url(../assets/fonts/Trajan\ Pro\ Bold.ttf);
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url(../assets/fonts/Lora-Medium.ttf);
+}
+
+body {
+    background-color: #021812;
+}
+
+#home-background {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/placeholders/placeholder_10.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.green-gradient {
+    position: absolute;
+    /*background-color: #0A2E21D5; */
+    background: linear-gradient(0deg, rgb(2, 24, 18) 0%, rgb(3, 29, 22) 5%, rgba(10,46,33,0.5) 100%);
+}
+
+#home-background h1 {
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home-background h1::after {
+    position: relative;
+    bottom: 6vh;
+    content: url(../assets/placeholders/HKunderline.webp);
+    max-height: 2vh;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#presentation {
+    background-color: #021812;
+}
+
+#presentation h2 {
+    font-size: 2rem;
+}
+
+/*
+    Le style pour un item de la catégorie des pays
+    Note : Le background ne marche que pour des images plus larges que hautes.
+*/
+
+#lands {
+    width: 90vw;
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 2vw;
+}
+
+.landContainer {
+    height: 30vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-duration: 500ms;
+}
+
+.content {
+    height: 4em;
+    border: 1px solid rgb(0, 57, 80);
+    text-align: center;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    transition-duration: 500ms;
+}
+
+.content>div {
+    background-color: #021812E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .title {
+    height: 4em;
+    border-bottom: 1px solid rgb(0, 57, 80);
+    transition-duration: 500ms;
+}
+
+.content .title h3 {
+    transition-duration: 500ms;
+}
+
+.hidden {
+    height: 2.25em;
+}
+
+
+/* Pour Edge et Chrome */
+
+.landContainer:hover {
+    background-size: auto 100%;
+}
+
+.landContainer:hover .content {
+    height: 6.25em;
+}
+
+#landItem1 {
+    background-image: url(../assets/placeholders/placeholder_8.jpg);
+}
+
+#landItem2 {
+    background-image: url(../assets/placeholders/placeholder_9.jpg);
+}
+
+#landItem3 {
+    background-image: url(../assets/placeholders/placeholder_13.jpg);
+}
+
+#landItem4 {
+    background-image: url(../assets/placeholders/placeholder_3.jpg);
+}
+
+#landItem5 {
+    background-image: url(../assets/placeholders/placeholder_11.jpg);
+}
