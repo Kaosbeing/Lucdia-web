@@ -1,0 +1,137 @@
+body {
+    background-color: #484848;
+    color: rgb(156, 165, 148);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.gigaContainer {
+    width: 60vw;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(4, auto);
+}
+
+.miniLogo {
+    clip-path: initial;
+    fill: rgb(156, 165, 148);
+    height: 2.5vh;
+    width: 2.5vh;
+    background-image: url("../assets/arrow-right-solid.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    border: 1px solid black;
+}
+
+#ItemsLoLPersos .gigaContainer {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#ItemsLoLPersos .container {
+    min-height: 30vh;
+}
+
+#ItemsLoLPersos .trucDeBas {
+    height: 10vh;
+    border-top: 1px solid black;
+    background-color: #021812E5;
+}
+
+#ItemsLoLPersos .text {
+    text-align: center;
+    margin-right: 5px;
+    margin: 0;
+}
+
+#ItemsLoLPersos .background {
+    height: 20vh;
+    background-image: url("../assets/chaosphere.png");
+}
+
+#ItemsLoLPersos .container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#item1 {
+    background-image: url("../assets/placeholders/placeholder_3.jpg");
+}
+
+#item2 {
+    background-image: url("../assets/placeholders/placeholder_11.jpg");
+}
+
+#item3 {
+    background-image: url("../assets/placeholders/placeholder_5.jpg");
+}
+
+#item4 {
+    background-image: url("../assets/placeholders/placeholder_6.jpg");
+}
+
+#item5 {
+    background-image: url("../assets/placeholders/placeholder_7.jpg");
+}
+
+.appear-on-hover {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 0;
+    opacity: 0;
+    transition: 500ms;
+}
+
+.container:hover .appear-on-hover {
+    opacity: 100;
+    max-height: 5vh;
+}
+
+.text-appear {
+    margin-right: 10px;
+}
+
+/* #ItemsQuarts .gigaContainer {
+    grid-template-columns: repeat(4, 1fr);
+} */
+
+/* #ItemsQuarts .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* #ItemsQuarts .background {
+    margin: 15px;
+    width: 10vh;
+    height: 10vh;
+    background-image: url("../assets/chaosphere.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+/* .trucDeDroite, .trucDeBas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trucDeDroite {
+    height: 100%;
+    width: 60%;
+} */
