@@ -69,8 +69,25 @@ body {
     margin: 5vh auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: 5em auto;
     gap: 2vw;
+}
+
+.landTitle {
+    font-size: 3rem;
+    grid-column: 1 / span 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landTitle::after {
+    position: relative;
+    bottom: 2vh;
+    content: url(../assets/placeholders/HKunderline.webp);
+    max-height: 2vh;
+    width: fit-content(5vw);
 }
 
 .landContainer {
@@ -142,7 +159,7 @@ body {
 }
 
 #landItem4 {
-    background-image: url(../assets/placeholders/placeholder_3.jpg);
+    background-image: url(../assets/placeholders/placeholder_3_v2.jpg);
 }
 
 #landItem5 {
