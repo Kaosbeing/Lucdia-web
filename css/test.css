@@ -16,17 +16,11 @@ a {
     text-decoration: none;
 }
 
-#ItemsPaysLucdia {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    gap: 2vw;
-}
-
 /*
     Le style pour un item de la catégorie des TESTLONGITEM
     Note : Le background ne marche que pour des images plus larges que hautes.
 */
+
 #TESTLONGITEM {
     margin-top: 5vh;
     width: 100vw;
@@ -51,7 +45,7 @@ a {
     transition-duration: 500ms;
 }
 
-.content {
+.TESTLONGITEMContainer .content {
     width: 10vw;
     height: 8vh;
     padding: 1vh 0;
@@ -64,30 +58,29 @@ a {
     transition-duration: 500ms;
 }
 
-.content>div {
+.TESTLONGITEMContainer .content>div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.content .title {
+.TESTLONGITEMContainer .content .title {
     height: 8vh;
     font-size: 1.3rem;
     transition-duration: 500ms;
 }
 
-.content .title h3 {
+.TESTLONGITEMContainer .content .title h3 {
     transition-duration: 500ms;
 }
 
-.hidden-text {
+.TESTLONGITEMContainer .hidden-text {
     font-size: 1rem;
     height: 1rem;
     opacity: 0;
     transition-duration: 500ms;
 }
-
 
 /* Animation */
 
@@ -111,6 +104,8 @@ a {
     transition-delay: 200ms;
 }
 
+/* Définition des backgrounds */
+
 #TESTLONGITEMItem1 .TESTLONGITEMBackground {
     background-image: url(../assets/placeholders/placeholder_charac.jpg);
 }
@@ -122,3 +117,95 @@ a {
 #TESTLONGITEMItem3 .TESTLONGITEMBackground {
     background-image: url(../assets/placeholders/placeholder_charac_3.jpg);
 }
+
+/* ======================================================================================================================================================= */
+
+/* Le style pour un item de la catégorie des TESTLANDITEM  */
+
+#TESTLANDITEM {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 2vw;
+}
+
+.TESTLANDITEMContainer {
+    height: 30vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-duration: 500ms;
+}
+
+.TESTLANDITEMContainer .content {
+    height: 5em;
+    border: 1px solid black;
+    text-align: center;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    transition-duration: 500ms;
+}
+
+.TESTLANDITEMContainer .content>div {
+    background-color: #021812E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.TESTLANDITEMContainer .content .title {
+    height: 5em;
+    border-bottom: 1px solid black;
+    transition-duration: 500ms;
+}
+
+.TESTLANDITEMContainer .content .title h3 {
+    transition-duration: 500ms;
+}
+
+.TESTLANDITEMContainer .hidden {
+    height: 2.25em;
+}
+
+/* L'animation */
+
+.TESTLANDITEMContainer:hover {
+    background-size: auto 100%;
+}
+
+.TESTLANDITEMContainer:hover .content {
+    height: 7.25em;
+}
+
+/* Définition des backgrounds */
+
+#landItem1 {
+    background-image: url(../assets/placeholders/placeholder_8.jpg);
+}
+
+#landItem2 {
+    background-image: url(../assets/placeholders/placeholder_9.jpg);
+}
+
+#landItem3 {
+    background-image: url(../assets/placeholders/placeholder_13.jpg);
+}
+
+#landItem4 {
+    background-image: url(../assets/placeholders/placeholder_3.jpg);
+}
+
+#landItem5 {
+    background-image: url(../assets/placeholders/placeholder_11.jpg);
+}
+
+/* ======================================================================================================================================================= */
+
+/*  */
