@@ -96,6 +96,7 @@ nav .navItem {
     position: relative;
     font-family: "Trajan Bold";
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition-duration: 350ms;
@@ -103,8 +104,10 @@ nav .navItem {
 
 nav .navItem::after {
     position: absolute;
+    margin: auto;
     height: 0;
     left: 0;
+    width: 90%;
     right: 0;
     bottom: 0;
     content: "";
