@@ -60,7 +60,7 @@
     width: 15vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     background-size: auto 110%;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,7 +70,6 @@
 .content {
     height: 4em;
     border: 1px solid black;
-    text-align: center;
     overflow-y: hidden;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -99,9 +98,6 @@
 .hidden {
     height: 2.25em;
 }
-
-
-/* Pour Edge et Chrome */
 
 .landContainer:hover {
     background-size: auto 100%;
