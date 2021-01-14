@@ -126,3 +126,9 @@
 #landItem5 {
     background-image: url(../assets/placeholders/placeholder_13.jpg);
 }
+
+.bottom-gradient-separation {
+    width: 100vw;
+    height: 5vh;
+    background: linear-gradient(180deg, var(--dark-green) 0%,rgb(4, 37, 29) 100%)
+}

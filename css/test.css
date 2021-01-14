@@ -93,6 +93,7 @@ a {
 
 .TESTLONGITEMContainer:hover .TESTLONGITEMBackground {
     background-size: 100% auto;
+    transition-delay: 100ms;
 }
 
 .TESTLONGITEMContainer:hover .content {

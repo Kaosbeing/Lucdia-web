@@ -63,8 +63,9 @@ a {
 }
 
 /* Paramètres du header (pour charac list, à voir pour le reste) */
+/* Fait aussi pour les footer du coup */
 
-header {
+header, footer {
     height: 10vh;
     background-color: var(--dark-green);
     display: flex;
@@ -102,20 +103,27 @@ nav .navItem {
     transition-duration: 350ms;
 }
 
-nav .navItem::after {
+header nav .navItem::after, footer nav .navItem::before {
     position: absolute;
     margin: auto;
     height: 0;
-    left: 0;
     width: 90%;
+    left: 0;
     right: 0;
-    bottom: 0;
     content: "";
     background-color: var(--light-green);
     transition: 350ms;
 }
 
-nav .navItem:hover::after {
+header nav .navItem::after {
+    bottom: 0;
+}
+
+footer nav .navItem::before {
+    top: 0;
+}
+
+header nav .navItem:hover::after, footer nav .navItem:hover::before {
     height: 5px;
 }
 
