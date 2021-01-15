@@ -337,8 +337,9 @@ nav .activeLink::after {
     height: 0;
 }
 
-#landListContainer li:hover {
+#landListContainer li:hover a {
     box-shadow: inset 5px 0px 0px 0px var(--light-green);
+    font-weight: bolder;
     transition-duration: 300ms;
 }
 
