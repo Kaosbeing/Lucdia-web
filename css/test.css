@@ -337,12 +337,6 @@ nav .activeLink::after {
     height: 0;
 }
 
-#landListContainer li:hover a {
-    box-shadow: inset 5px 0px 0px 0px var(--light-green);
-    font-weight: bolder;
-    transition-duration: 300ms;
-}
-
 /* Parce qu'avec la grid apparemment, le 100% de nav .navItem a (301) bug*/
 
 #landListContainer li a {
@@ -365,4 +359,11 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 
 #landContainer:hover+#landListContainer li {
     transition-delay: 200ms;
+}
+
+#landListContainer li:hover a {
+    background-color: #03221a;
+    box-shadow: inset 5px 0px 0px 0px var(--light-green);
+    font-weight: bolder;
+    transition-duration: 300ms;
 }
