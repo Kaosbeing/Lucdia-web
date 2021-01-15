@@ -10,6 +10,7 @@
 
 :root {
     --dark-green: #021812;
+    --dark-green-lighter: #03221a;
     --light-green: #1A965A;
     --dark-green-opacity: #021812E5;
 }
@@ -273,16 +274,15 @@ nav .navItem {
     font-family: "Trajan Bold";
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     transition-duration: 350ms;
 }
 
 header nav .navItem::after, footer nav .navItem::before {
     position: absolute;
-    margin: auto;
     height: 0;
     width: 90%;
+    margin: auto;
     left: 0;
     right: 0;
     content: "";
@@ -312,35 +312,33 @@ nav .activeLink::after {
 
 /* Pour le menu déroulant */
 
-#landListContainer {
+.navHiddenList {
     height: 0vh;
     overflow: hidden;
-    grid-row: 2;
-    grid-column: 2;
     transition-duration: 500ms;
 }
 
-#landListContainer, #landListContainer li {
+
+.navHiddenList, .navHiddenList li {
     width: 10vw;
     background-color: var(--dark-green);
 }
 
-#landListContainer li {
+.navHiddenList li {
     height: 5vh;
     opacity: 0;
     transition-duration: 500ms;
 }
 
-/* Pour retirer le after moche d'en bas du menu */
-
-#landListContainer:hover::after {
-    height: 0;
+#landListContainer {
+    grid-row: 2;
+    grid-column: 2;
 }
 
-/* Parce qu'avec la grid apparemment, le 100% de nav .navItem a (301) bug*/
+/* Pour retirer le after moche d'en bas du menu */
 
-#landListContainer li a {
-    width: 10vw;
+nav .navItem.navHiddenList:hover::after {
+    height: 0;
 }
 
 /* Les animations */
@@ -349,21 +347,21 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
     height: 5px;
 }
 
+.navHiddenList li:hover a, .navHiddenList .activeListItem {
+    background-color: var(--dark-green-lighter);
+    box-shadow: inset 5px 0px 0px 0px var(--light-green);
+    transition-duration: 250ms;
+}
+
+/* Spécialement pour la liste des pays. */
 #landContainer:hover+#landListContainer, #landListContainer:hover {
     height: 25vh;
 }
 
-#landContainer:hover+#landListContainer li, #landListContainer:hover li {
+#landContainer:hover+.navHiddenList li, #landListContainer:hover li {
     opacity: 100;
 }
 
 #landContainer:hover+#landListContainer li {
     transition-delay: 200ms;
-}
-
-#landListContainer li:hover a {
-    background-color: #03221a;
-    box-shadow: inset 5px 0px 0px 0px var(--light-green);
-    font-weight: bolder;
-    transition-duration: 300ms;
 }
