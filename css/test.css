@@ -1,19 +1,50 @@
+@font-face {
+    font-family: "Trajan Bold";
+    src: url(../assets/fonts/Trajan\ Pro\ Bold.ttf);
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url(../assets/fonts/Lora-Medium.ttf);
+}
+
+:root {
+    --dark-green: #021812;
+    --light-green: #1A965A;
+    --dark-green-opacity: #021812E5;
+}
+
+html {
+    font-size: 100%;
+}
+
 body {
-    background-color: #484848;
+    margin: 0;
+    font-family: "Lora";
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    justify-content: center;
+    background-color: var(--dark-green-opacity);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0px;
-    margin-top: 5px;
+    margin: 0;
+    font-family: "Trajan Bold";
+}
+
+p {
+    margin: 0;
+    font-family: "Lora";
+    font-size: 1.2rem;
 }
 
 a {
     color: white;
     text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 /*
@@ -208,4 +239,129 @@ a {
 
 /* ======================================================================================================================================================= */
 
-/*  */
+/* Le style pour le header de la catégorie TESTHEADERLIST */
+
+header, footer {
+    height: 10vh;
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: flex-start;
+}
+
+header #homeLinkContainer {
+    width: 10vh;
+    height: 10vh;
+}
+
+header #homeLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/lucdia_logo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(6, 10vw);
+    grid-template-rows: 10vh auto;
+}
+
+nav .navItem {
+    position: relative;
+    font-family: "Trajan Bold";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 350ms;
+}
+
+header nav .navItem::after, footer nav .navItem::before {
+    position: absolute;
+    margin: auto;
+    height: 0;
+    width: 90%;
+    left: 0;
+    right: 0;
+    content: "";
+    background-color: var(--light-green);
+    transition: 350ms;
+}
+
+header nav .navItem::after {
+    bottom: 0;
+}
+
+footer nav .navItem::before {
+    top: 0;
+}
+
+nav .navItem a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .activeLink::after {
+    height: 5px;
+}
+
+/* Pour le menu déroulant */
+
+#landListContainer {
+    height: 0vh;
+    overflow: hidden;
+    grid-row: 2;
+    grid-column: 2;
+    transition-duration: 500ms;
+}
+
+#landListContainer, #landListContainer li {
+    width: 10vw;
+    background-color: var(--dark-green);
+}
+
+#landListContainer li {
+    height: 5vh;
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+/* Pour retirer le after moche d'en bas du menu */
+
+#landListContainer:hover::after {
+    height: 0;
+}
+
+#landListContainer li:hover {
+    box-shadow: inset 5px 0px 0px 0px var(--light-green);
+    transition-duration: 300ms;
+}
+
+/* Parce qu'avec la grid apparemment, le 100% de nav .navItem a (301) bug*/
+
+#landListContainer li a {
+    width: 10vw;
+}
+
+/* Les animations */
+
+header nav .navItem:hover::after, footer nav .navItem:hover::before {
+    height: 5px;
+}
+
+#landContainer:hover+#landListContainer, #landListContainer:hover {
+    height: 25vh;
+}
+
+#landContainer:hover+#landListContainer li, #landListContainer:hover li {
+    opacity: 100;
+}
+
+#landContainer:hover+#landListContainer li {
+    transition-delay: 200ms;
+}
