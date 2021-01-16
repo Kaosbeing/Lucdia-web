@@ -48,6 +48,12 @@ ul {
     list-style: none;
 }
 
+main {
+    display: grid;
+    grid-template-rows: repeat(15, 1fr);
+    gap: 2vh;
+}
+
 /*
     Le style pour un item de la catégorie des TESTLONGITEM
     Note : Le background ne marche que pour des images plus larges que hautes.
@@ -164,6 +170,7 @@ ul {
 .TESTLANDITEMContainer {
     height: 30vh;
     width: 15vw;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -318,7 +325,6 @@ nav .activeLink::after {
     transition-duration: 500ms;
 }
 
-
 .navHiddenList, .navHiddenList li {
     width: 10vw;
     background-color: var(--dark-green);
@@ -354,6 +360,7 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 }
 
 /* Spécialement pour la liste des pays. */
+
 #landContainer:hover+#landListContainer, #landListContainer:hover {
     height: 25vh;
 }
@@ -363,5 +370,92 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 }
 
 #landContainer:hover+#landListContainer li {
+    transition-delay: 200ms;
+}
+
+/* ======================================================================================================================================================= */
+
+/* Le style pour les TESTLANDITEM, mais en mieux. */
+
+#TESTLANDITEMV2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 2vw;
+}
+
+.squarePlaceholderItemContainer .squarePlaceholderItemContainerTitle {
+    grid-column: 1 / span 5;
+}
+
+.TESTLANDITEMV2Container {
+    height: 30vh;
+    width: 15vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-duration: 500ms;
+}
+
+.TESTLANDITEMV2Container .content {
+    width: 15vw;
+    height: 6vh;
+    padding: 1vh 0;
+    background-color: var(--dark-green-opacity);
+    text-align: center;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    transition-duration: 500ms;
+}
+
+.TESTLANDITEMV2Container .content>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.TESTLANDITEMV2Container .content .title {
+    height: 6vh;
+    font-size: 1.3rem;
+    transition-duration: 500ms;
+}
+
+.TESTLANDITEMV2Container .content .title h3 {
+    transition-duration: 500ms;
+}
+
+.TESTLANDITEMV2Container .hidden-text {
+    font-size: 1rem;
+    height: 1rem;
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+/* Animation */
+
+.TESTLANDITEMV2Container:hover {
+    background-size: auto 100%;
+    transition-delay: 100ms;
+}
+
+.TESTLANDITEMV2Container:hover .content {
+    height: 4vh;
+    padding: 2vh 0;
+}
+
+.TESTLANDITEMV2Container:hover .title {
+    height: 3vh;
+}
+
+.TESTLANDITEMV2Container:hover .hidden-text {
+    position: relative;
+    opacity: 100;
     transition-delay: 200ms;
 }
