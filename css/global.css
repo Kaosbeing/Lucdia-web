@@ -65,15 +65,26 @@ ul {
     align-items: center;
 }
 
-.mainTitle::after {
+.mainTitle.bigTitle::after {
     position: relative;
     bottom: 6vh;
     content: url(../assets/placeholders/HKunderline.webp);
     max-height: 2vh;
 }
 
-.lucdiaMainTitle.bigTitle::after {
-    bottom: 6vh;
+.bigTitle {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigTitle::after {
+    position: relative;
+    bottom: 2vh;
+    content: url(../assets/placeholders/HKunderline.webp);
+    max-height: 2vh;
 }
 
 /* Paramètres du header (pour charac list, à voir pour le reste) */
@@ -156,7 +167,6 @@ nav .navItem.activeLink::after {
     transition-duration: 500ms;
 }
 
-
 .navHiddenList, .navHiddenList li {
     width: 10vw;
     background-color: var(--dark-green);
@@ -173,13 +183,13 @@ nav .navItem.activeLink::after {
     grid-column: 2;
 }
 
-/* Pour retirer le after moche d'en bas du menu */
+/* Pour retirer le after moche d'en bas du menu déroulant des pays */
 
 nav .navItem.navHiddenList:hover::after {
     height: 0;
 }
 
-/* Les animations */
+/* Les animations pour le header */
 
 header nav .navItem:hover::after, footer nav .navItem:hover::before {
     height: 5px;
@@ -192,6 +202,7 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 }
 
 /* Spécialement pour la liste des pays. */
+
 #landContainer:hover+#landListContainer, #landListContainer:hover {
     height: 25vh;
 }
@@ -204,18 +215,145 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
     transition-delay: 200ms;
 }
 
+/* Pour la séparation juste avant le footer, pour qu'on puisse voir bien la séparation */
+
+.bottom-gradient-separation {
+    width: 100vw;
+    height: 5vh;
+    background: linear-gradient(180deg, var(--dark-green) 0%,rgb(4, 37, 29) 100%)
+}
+
+/* 
+    Style pour un item de type squarePlaceholderItem (item de pays sur la page d'accueil, ou de héros sur les pages de pays
+    Note : Le background ne marche que pour des images plus larges que hautes. 
+*/
+
+.squarePlaceholderItemContainer {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 5em auto;
+    gap: 2vw;
+}
+
+.squarePlaceholderItemContainer.fiveColumns {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.squarePlaceholderItemContainer.fiveColumns .squarePlaceholderItemContainerTitle {
+    grid-column: 1 / span 5;
+}
+
+.squarePlaceholderItemContainer.fourColumns {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.squarePlaceholderItemContainer.fourColumns .squarePlaceholderItemContainerTitle {
+    grid-column: 1 / span 4;
+}
+
+.squarePlaceholderItem {
+    height: 30vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-duration: 500ms;
+}
+
+.squarePlaceholderItem .content {
+    height: 4em;
+    border: 1px solid black;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    transition-duration: 500ms;
+}
+
+.squarePlaceholderItem .content>div {
+    background-color: var(--dark-green-opacity);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.squarePlaceholderItem .content .title {
+    height: 4em;
+    border-bottom: 1px solid black;
+    transition-duration: 500ms;
+}
+
+.squarePlaceholderItem .content .title h3 {
+    transition-duration: 500ms;
+}
+
+.squarePlaceholderItem .hidden {
+    height: 2.25em;
+}
+
+/* Les animations pour un squarePlaceholderItem */
+
+.squarePlaceholderItem:hover {
+    background-size: auto 100%;
+}
+
+.squarePlaceholderItem:hover .content {
+    height: 6.25em;
+}
+
 /* Paramètres du background commun à toutes les pages */
 
 .mainBackground {
     height: 60vh;
     width: 100%;
+    margin-bottom: 5vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
 }
 
+/* Définition de tous les backgrounds de tous les squarePlaceHolder de toutes les pages */
+
+#squarePlaceHolderHomeLand1 {
+    background-image: url(../assets/placeholders/placeholder_8.jpg);
+}
+
+#squarePlaceHolderHomeLand2 {
+    background-image: url(../assets/placeholders/placeholder_9.jpg);
+}
+
+#squarePlaceHolderHomeLand3 {
+    background-image: url(../assets/placeholders/placeholder_11.jpg);
+}
+
+#squarePlaceHolderHomeLand4 {
+    background-image: url(../assets/placeholders/placeholder_3_v2.jpg);
+}
+
+#squarePlaceHolderHomeLand5 {
+    background-image: url(../assets/placeholders/placeholder_13.jpg);
+}
+
+#squarePlaceholderBirninHero1 {
+    background-image: url(../assets/placeholders/placeholder_6.jpg);
+}
+
+#squarePlaceholderBirninHero2 {
+    background-image: url(../assets/placeholders/placeholder_6.jpg);
+}
+
 /* Définition de tous les backgrounds de toutes les pages */
+
+#home-background {
+    background-image: url(../assets/placeholders/placeholder_10.png);
+    height: 100vh;
+}
 
 #characListBackground {
     background-image: url(../assets/placeholders/placeholder_10.png);
