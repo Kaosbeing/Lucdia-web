@@ -295,8 +295,8 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 }
 
 .squarePlaceholderItem:hover .content {
-    height: 4vh;
-    padding: 2vh 0;
+    height: 5.5vh;
+    padding: 1.25vh 0;
 }
 
 .squarePlaceholderItem:hover .title {
@@ -348,6 +348,11 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 
 /* Définition de tous les backgrounds de tous les squarePlaceHolder de toutes les pages */
 
+.heroLandLeaderContainerBackground {
+    background: var(--dark-green);
+    background: linear-gradient(0deg, var(--dark-green) 30%, var(--dark-green-lighter) 50%, var(--dark-green) 70%); 
+}
+
 #squarePlaceHolderHomeLand1 {
     background-image: url(../assets/placeholders/placeholder_8.jpg);
 }
@@ -369,11 +374,15 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 }
 
 #squarePlaceholderBirninLeader1 {
-    background-image: url(../assets/placeholders/placeholder_6.jpg);
+    background-image: url(../assets/placeholders/placeholder_charac_2.jpg);
 }
 
 #squarePlaceholderBirninLeader2 {
-    background-image: url(../assets/placeholders/placeholder_6.jpg);
+    background-image: url(../assets/placeholders/placeholder_charac_3.jpg);
+}
+
+#squarePlaceholderBirninHero1 {
+    background-image: url(../assets/placeholders/placeholder_charac4.jpg);
 }
 
 /* Définition de tous les backgrounds de toutes les pages */
