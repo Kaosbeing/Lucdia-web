@@ -13,6 +13,7 @@
     --dark-green-lighter: #03221a;
     --light-green: #1A965A;
     --dark-green-opacity: #021812E5;
+    --header-height: 7vh;
 }
 
 /* Paramètres globaux et suppression des paramètres CSS pré-définis. */
@@ -88,15 +89,15 @@ ul {
 */
 
 header, footer {
-    height: 10vh;
+    height: var(--header-height);
     background-color: var(--dark-green);
     display: flex;
     justify-content: flex-start;
 }
 
 header #homeLinkContainer {
-    width: 10vh;
-    height: 10vh;
+    width: var(--header-height);
+    height: var(--header-height);
 }
 
 header #homeLink {
@@ -111,7 +112,7 @@ header #homeLink {
 nav {
     display: grid;
     grid-template-columns: repeat(6, 10vw);
-    grid-template-rows: 10vh auto;
+    grid-template-rows: var(--header-height) auto;
 }
 
 nav .navItem {
@@ -197,7 +198,7 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
     transition-duration: 250ms;
 }
 
-/* Spécialement pour la liste des pays. */
+/* Spécialement pour la liste déroulante des pays. */
 
 #landContainer:hover+#landListContainer, #landListContainer:hover {
     height: 25vh;
@@ -209,6 +210,14 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 
 #landContainer:hover+#landListContainer li {
     transition-delay: 200ms;
+}
+
+/* Style pour les histoires (valide pour Birnin, pour le moment.) */
+
+p.story {
+    width: 70vw;
+    margin: 7vh auto;
+    text-align: center;
 }
 
 /* Pour la séparation juste avant le footer, pour qu'on puisse voir bien la séparation */
@@ -328,7 +337,7 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 /* Paramètres du background commun à toutes les pages */
 
 .mainBackground {
-    height: 60vh;
+    height: 75vh;
     width: 100%;
     margin-bottom: 5vh;
     background-size: cover;
@@ -340,7 +349,7 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 .green-gradient {
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgb(2, 24, 18) 0%, rgb(3, 29, 22) 5%, rgba(10, 46, 33, 0.5) 100%);
+    background: linear-gradient(0deg, var(--dark-green) 0%, rgb(3, 29, 22) 5%, rgba(10, 46, 33, 0.5) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -350,7 +359,7 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 
 .heroLandLeaderContainerBackground {
     background: var(--dark-green);
-    background: linear-gradient(0deg, var(--dark-green) 30%, var(--dark-green-lighter) 50%, var(--dark-green) 70%); 
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, var(--dark-green) 90%), linear-gradient(0deg, var(--dark-green) 30%, var(--dark-green-lighter) 50%, var(--dark-green) 70%) ;
 }
 
 #squarePlaceHolderHomeLand1 {
