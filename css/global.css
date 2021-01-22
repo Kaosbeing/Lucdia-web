@@ -52,6 +52,17 @@ ul {
     list-style: none;
 }
 
+i {
+    font-style: normal;
+    color: var(--light-green);
+    cursor: pointer;
+    transition: box-shadow 200ms;
+}
+
+i:hover {
+    box-shadow: inset 0px -0.1em 0px 0px var(--light-green);
+}
+
 /* Paramètres de titres */
 
 .mainTitle.bigTitle {
@@ -215,7 +226,7 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
 /* Style pour les histoires (valide pour Birnin, pour le moment.) */
 
 p.story {
-    width: 70vw;
+    width: 50vw;
     margin: 7vh auto;
     text-align: center;
 }

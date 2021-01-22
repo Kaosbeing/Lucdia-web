@@ -1,6 +1,6 @@
 # Lucdia-web
 
-Current Version : 0.4.4.0
+Current Version : 0.4.5.0
 
 Le site officiel du projet Lucdia askip.
 
