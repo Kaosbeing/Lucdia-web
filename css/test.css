@@ -319,31 +319,26 @@ nav .activeLink::after {
 
 /* Pour le menu déroulant */
 
-.navHiddenList {
+.navHiddenList, .navHiddenSubList {
     height: 0vh;
     overflow: hidden;
     transition-duration: 500ms;
 }
 
-.navHiddenList, .navHiddenList li {
-    width: 10vw;
+.navHiddenList, .navHiddenList li, .navHiddenSubList, .navHiddenSubList li {
+    min-width: 10vw;
     background-color: var(--dark-green);
 }
 
-.navHiddenList li {
+.navHiddenList li, .navHiddenSubList li {
     height: 5vh;
     opacity: 0;
     transition-duration: 500ms;
 }
 
-#landListContainer {
-    grid-row: 2;
-    grid-column: 2;
-}
-
 /* Pour retirer le after moche d'en bas du menu */
 
-nav .navItem.navHiddenList:hover::after {
+nav .navItem.navHiddenList:hover::after, nav .navItem.navHiddenSubList:hover::after {
     height: 0;
 }
 
@@ -359,17 +354,43 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
     transition-duration: 250ms;
 }
 
-/* Spécialement pour la liste des pays. */
+/* Pour les listes particulières. */
+
+#landListContainer {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#eventListContainer {
+    grid-row: 2;
+    grid-column: 4;
+}
+
+.eventSubList {
+    grid-row: 2;
+    grid-column: 5;
+}
 
 #landContainer:hover+#landListContainer, #landListContainer:hover {
     height: 25vh;
 }
 
-#landContainer:hover+.navHiddenList li, #landListContainer:hover li {
+#eventContainer:hover+#eventListContainer, #eventListContainer:hover {
+    height: 15vh;
+}
+
+#eventListitem1:hover+#eventSubList1Container, #eventSubList1Container:hover {
+    height: 20vh;
+    width: 20vw;
+}
+
+#landContainer:hover+.navHiddenList li, #landListContainer:hover li,
+#eventContainer:hover+.navHiddenList li, #eventListContainer:hover li,
+#eventListitem1:hover+#eventSubList1Container li, #eventSubList1Container:hover li {
     opacity: 100;
 }
 
-#landContainer:hover+#landListContainer li {
+#landContainer:hover+#landListContainer li, #eventContainer:hover+#landListContainer li {
     transition-delay: 200ms;
 }
 

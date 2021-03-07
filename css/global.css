@@ -49,7 +49,6 @@ a {
 ul {
     padding: 0;
     margin: 0;
-    list-style: none;
 }
 
 i {
@@ -72,13 +71,6 @@ i:hover {
     align-items: center;
 }
 
-.mainTitle.bigTitle::after {
-    position: relative;
-    bottom: 6vh;
-    content: url(../assets/placeholders/HKunderline.webp);
-    max-height: 2vh;
-}
-
 .bigTitle {
     font-size: 3rem;
     display: flex;
@@ -89,9 +81,16 @@ i:hover {
 
 .bigTitle::after {
     position: relative;
-    bottom: 2vh;
-    content: url(../assets/placeholders/HKunderline.webp);
-    max-height: 2vh;
+    content: "";
+    background-image: url(../assets/placeholders/HKunderline.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4vh;
+    width: 35vw;
+}
+
+.subTitle {
+    font-size: 1.5rem;
 }
 
 /*
@@ -390,6 +389,30 @@ p.story {
     background-size: cover;
 }
 
+/* Paramètres particuliers du background */
+
+#glossaryMainBackground {
+    height: 20vh;
+}
+
+#glossaryMainBackground .green-gradient {
+    background: linear-gradient(0deg, var(--dark-green) 0%, var(--dark-green-lighter) 100%);
+}
+
+/* Définition de tous les backgrounds de toutes les pages */
+
+#home-background {
+    background-image: url(../assets/placeholders/placeholder_10.png);
+}
+
+#characListBackground {
+    background-image: url(../assets/placeholders/placeholder_10.png);
+}
+
+#birninMainBackground {
+    background-image: url(../assets/placeholders/placeholder_8.jpg);
+}
+
 /* Définition de tous les backgrounds de tous les squarePlaceHolder de toutes les pages */
 
 .heroLandLeaderContainerBackground {
@@ -427,18 +450,4 @@ p.story {
 
 #squarePlaceholderBirninHero1 {
     background-image: url(../assets/placeholders/placeholder_charac4.jpg);
-}
-
-/* Définition de tous les backgrounds de toutes les pages */
-
-#home-background {
-    background-image: url(../assets/placeholders/placeholder_10.png);
-}
-
-#characListBackground {
-    background-image: url(../assets/placeholders/placeholder_10.png);
-}
-
-#birninMainBackground {
-    background-image: url(../assets/placeholders/placeholder_8.jpg);
 }
