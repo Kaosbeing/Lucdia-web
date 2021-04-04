@@ -8,6 +8,18 @@
     src: url(../assets/fonts/Lora-Medium.ttf);
 }
 
+@keyframes scrollCTAanimation {
+    0% {
+        bottom: 5px;
+    }
+    50% {
+        bottom: 15px;
+    }
+    100% {
+        bottom: 5px;
+    }
+}
+
 :root {
     --dark-green: #021812;
     --dark-green-lighter: #03221a;
@@ -85,7 +97,8 @@ i:hover {
     background-image: url(../assets/placeholders/HKunderline.webp);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 4vh;
+    background-position: center;
+    height: 0.5em;
     width: 35vw;
 }
 
@@ -366,27 +379,18 @@ p.story {
     align-items: center;
 }
 
-.scrollCueContainer {
+.scrollCTA {
     position: absolute;
-    bottom: 0vh;
-    width: 100%;
+    width: 50px;
+    opacity: 100;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    animation: scrollCTAanimation 2s ease-in-out infinite;
 }
 
-.scrollCue {
-    height: 3vh;
-    border: 1px solid white;
-}
-
-.scrollCueBackground {
-    margin-top: 1vh;
-    height: 2vh;
-    width: 2vh;
-    background-image: url(../assets/scrollcue_background.png);
-    background-size: cover;
+#scrollCTAsvg {
+    transform: scale(25%);
 }
 
 /* Paramètres particuliers du background */
