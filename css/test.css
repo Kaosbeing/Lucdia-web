@@ -256,15 +256,10 @@ header, footer {
     justify-content: flex-start;
 }
 
-header #homeLinkContainer {
-    width: 10vh;
-    height: 10vh;
-}
-
 header #homeLink {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 10vh;
+    height: 10vh;
     background-image: url(../assets/lucdia_logo.png);
     background-size: cover;
     background-position: center;
@@ -279,9 +274,6 @@ nav {
 nav .navItem {
     position: relative;
     font-family: "Trajan Bold";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     transition-duration: 350ms;
 }
 
@@ -305,16 +297,14 @@ footer nav .navItem::before {
     top: 0;
 }
 
-nav .navItem a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 nav .activeLink::after {
     height: 5px;
+}
+
+/* Pour retirer le after moche d'en bas du menu */
+
+nav .navItem.navHiddenList:hover::after, nav .navItem.navHiddenSubList:hover::after {
+    height: 0;
 }
 
 /* Pour le menu déroulant */
@@ -330,16 +320,10 @@ nav .activeLink::after {
     background-color: var(--dark-green);
 }
 
-.navHiddenList li, .navHiddenSubList li {
+.navHiddenList>div, .navHiddenSubList>div {
     height: 5vh;
-    opacity: 0;
+    opacity: 100;
     transition-duration: 500ms;
-}
-
-/* Pour retirer le after moche d'en bas du menu */
-
-nav .navItem.navHiddenList:hover::after, nav .navItem.navHiddenSubList:hover::after {
-    height: 0;
 }
 
 /* Les animations */
@@ -348,50 +332,30 @@ header nav .navItem:hover::after, footer nav .navItem:hover::before {
     height: 5px;
 }
 
-.navHiddenList li:hover a, .navHiddenList .activeListItem {
+.navHiddenList li:hover>div, .navHiddenList .activeListItem {
     background-color: var(--dark-green-lighter);
     box-shadow: inset 5px 0px 0px 0px var(--light-green);
     transition-duration: 250ms;
 }
 
-/* Pour les listes particulières. */
+/* Pour les listes particulières ? */
 
-#landListContainer {
-    grid-row: 2;
-    grid-column: 2;
+.hasSubList {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
 }
 
-#eventListContainer {
-    grid-row: 2;
-    grid-column: 4;
+.hasSubList:first-child {
+    grid-row: 1;
 }
 
-.eventSubList {
+.hasSubList:last-child {
     grid-row: 2;
-    grid-column: 5;
 }
 
-#landContainer:hover+#landListContainer, #landListContainer:hover {
+.hasSubList:hover:last-child {
     height: 25vh;
-}
-
-#eventContainer:hover+#eventListContainer, #eventListContainer:hover {
-    height: 15vh;
-}
-
-#eventListitem1:hover+#eventSubList1Container, #eventSubList1Container:hover {
-    height: 20vh;
-    width: 20vw;
-}
-
-#landContainer:hover+.navHiddenList li, #landListContainer:hover li,
-#eventContainer:hover+.navHiddenList li, #eventListContainer:hover li,
-#eventListitem1:hover+#eventSubList1Container li, #eventSubList1Container:hover li {
-    opacity: 100;
-}
-
-#landContainer:hover+#landListContainer li, #eventContainer:hover+#landListContainer li {
-    transition-delay: 200ms;
 }
 
 /* ======================================================================================================================================================= */
